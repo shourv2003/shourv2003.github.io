@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shourv Tarafder | EEE Student & Robotics Enthusiast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* slate-900 */
+            color: #e2e8f0; /* slate-200 */
+            cursor: none; /* Hide default cursor */
+        }
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0f172a;
+            z-index: 10000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease-out;
+        }
+        .loader {
+            border: 4px solid #1e293b; /* slate-800 */
+            border-top: 4px solid #4ade80; /* green-400 */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Custom Cursor */
+        .cursor-dot, .cursor-outline {
+            pointer-events: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #4ade80; /* green-400 */
+        }
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #4ade80;
+            transition-duration: 0.1s;
+        }
+        body:hover .cursor-dot, body:hover .cursor-outline {
+            opacity: 1;
+        }
+        .glass-effect {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .section-hidden {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .section-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Typing effect */
+        .typing::after {
+            content: '|';
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        /* Active nav link */
+        .nav-active {
+            color: #4ade80 !important;
+            font-weight: 700;
+        }
+        /* Particles JS */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .project-card, .achievement-card, .cert-card {
+            transform-style: preserve-3d;
+        }
+        .project-card:hover {
+            box-shadow: 0 10px 30px -15px rgba(74, 222, 128, 0.2);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div id="preloader"><div class="loader"></div></div>
+    
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Header & Navigation -->
+    <header class="glass-effect fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white tracking-wider hover:text-green-400 transition-colors">ST</a>
+                </div>
+                <nav class="hidden md:block">
+                    <div id="nav-links" class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="nav-link text-slate-300 hover:text-green-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#experience" class="nav-link text-slate-300 hover:text-green-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
+                        <a href="#projects" class="nav-link text-slate-300 hover:text-green-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="#skills" class="nav-link text-slate-300 hover:text-green-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+                        <a href="#achievements" class="nav-link text-slate-300 hover:text-green-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Achievements</a>
+                        <a href="#contact" class="nav-link text-slate-300 hover:text-green-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative">
+        <div id="particles-js"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 relative z-10">
+
+            <!-- Hero Section -->
+            <section id="hero" class="min-h-[85vh] flex items-center">
+                <div class="w-full text-center lg:text-left">
+                    <p class="text-green-400 font-medium mb-4 text-lg">Hi, my name is</p>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-100 mb-4">Shourv Tarafder.</h1>
+                    <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-400 mb-6 typing" id="typing-text"></h2>
+                    <p class="max-w-xl mx-auto lg:mx-0 text-slate-300 mb-8 leading-relaxed">
+                        I'm an Electrical & Electronic Engineering student specializing in Robotics, IoT, and AI. I build innovative systems that bridge the physical and digital worlds.
+                    </p>
+                    <div class="flex justify-center lg:justify-start items-center space-x-6">
+                        <!-- NOTE: Add your real CV link here -->
+                        <a href="#" class="inline-block bg-green-400 text-slate-900 font-bold py-3 px-8 rounded-lg hover:bg-green-300 transition-colors">View Resume</a>
+                         <div class="flex items-center space-x-6">
+                            <a href="#" target="_blank" class="icon-link text-slate-400 hover:text-green-400 transition-colors" aria-label="LinkedIn"><svg xmlns="http://www.w.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                            <a href="#" target="_blank" class="icon-link text-slate-400 hover:text-green-400 transition-colors" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Me -->
+            <section id="about" class="py-24 section-hidden">
+                 <h2 class="text-3xl font-bold text-center mb-16 text-slate-100 relative inline-block left-1/2 -translate-x-1/2">
+                    <span class="text-green-400 pr-2">01.</span> About Me
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-slate-700"><span class="absolute bottom-0 left-0 h-0.5 bg-green-400 w-1/3"></span></span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-10 items-center">
+                    <div class="md:col-span-3">
+                         <p class="text-slate-300 mb-4 leading-relaxed">Hello! I'm Shourv, a third-year Electrical & Electronic Engineering student at <span class="text-green-400 font-semibold">Chittagong University of Engineering and Technology (CUET)</span>. My fascination with technology began with simple circuits and has evolved into a deep-seated passion for creating intelligent systems that can perceive and interact with the world.</p>
+                        <p class="text-slate-300 mb-4 leading-relaxed">My focus is on Industrial Control Systems, Autonomous Navigation, Robotics, and IoT. I have hands-on experience in <span class="text-green-400 font-semibold">ROS 2 development</span>, Gazebo simulation, 3D mechanical design, <span class="text-green-400 font-semibold">YOLO object detection</span>, and OpenCV applications. I am actively seeking opportunities to apply my skills in robotics, automation, and AI-driven systems to develop innovative solutions.</p>
+                    </div>
+                     <div class="md:col-span-2 flex justify-center">
+                        <div class="w-64 h-64 rounded-lg bg-slate-800 border-2 border-green-400 relative group" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+                            <img src="https://placehold.co/400x400/0f172a/e2e8f0?text=Shourv" alt="Shourv Tarafder" class="rounded-lg absolute inset-0 w-full h-full object-cover transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2">
+                             <div class="w-full h-full rounded-lg border-2 border-green-400 absolute top-0 left-0 transform transition-transform duration-300 group-hover:-translate-x-2 group-hover:translate-y-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Experience Section -->
+            <section id="experience" class="py-24 section-hidden">
+                 <h2 class="text-3xl font-bold text-center mb-16 text-slate-100 relative inline-block left-1/2 -translate-x-1/2">
+                    <span class="text-green-400 pr-2">02.</span> Experience & Leadership
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-slate-700"><span class="absolute bottom-0 left-0 h-0.5 bg-green-400 w-1/3"></span></span>
+                </h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="relative border-l-2 border-slate-700 pl-8 space-y-12">
+                        <div class="relative">
+                            <div class="absolute -left-[3.2rem] top-1 h-6 w-6 rounded-full bg-green-400 border-4 border-slate-900 shadow-md shadow-green-400/50"></div>
+                            <p class="text-sm text-green-400">Present</p>
+                            <h3 class="text-xl font-semibold text-slate-100">CEO and Founder @ Sinc Robotics</h3>
+                            <p class="text-sm text-slate-400 mb-2">Leading a startup focused on robotics education and product development.</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[3.2rem] top-1 h-6 w-6 rounded-full bg-green-400 border-4 border-slate-900"></div>
+                            <h3 class="text-xl font-semibold text-slate-100">Electric Team Lead @ CUET Mongolchari (Mars Rover)</h3>
+                            <p class="text-sm text-slate-400 mb-2">Managed the electrical team, overseeing power systems, motor control, and sensor integration for the university's Mars Rover project.</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[3.2rem] top-1 h-6 w-6 rounded-full bg-green-400 border-4 border-slate-900"></div>
+                             <h3 class="text-xl font-semibold text-slate-100">Assistant Secretary of Graphics @ IEEE Student Branch, CUET</h3>
+                            <p class="text-sm text-slate-400 mb-2">Contributed to visual communications and branding for a professional technical organization.</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[3.2rem] top-1 h-6 w-6 rounded-full bg-green-400 border-4 border-slate-900"></div>
+                            <h3 class="text-xl font-semibold text-slate-100">Instructor @ Robo Mechatronics Association</h3>
+                            <p class="text-sm text-slate-400 mb-2">Conducted workshops on Advanced Robotics, Drones, and Arduino, mentoring students.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="py-24 section-hidden">
+                <h2 class="text-3xl font-bold text-center mb-16 text-slate-100 relative inline-block left-1/2 -translate-x-1/2">
+                    <span class="text-green-400 pr-2">03.</span> Things I've Built
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-slate-700"><span class="absolute bottom-0 left-0 h-0.5 bg-green-400 w-1/3"></span></span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Projects will be dynamically inserted here -->
+                </div>
+                <div class="text-center mt-12">
+                     <button id="show-more-btn" class="bg-green-400 text-slate-900 font-bold py-3 px-8 rounded-lg hover:bg-green-300 transition-colors">Show More</button>
+                </div>
+            </section>
+            
+            <!-- Skills Section -->
+            <section id="skills" class="py-24 section-hidden">
+                <h2 class="text-3xl font-bold text-center mb-16 text-slate-100 relative inline-block left-1/2 -translate-x-1/2">
+                    <span class="text-green-400 pr-2">04.</span> Skills & Certifications
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-slate-700"><span class="absolute bottom-0 left-0 h-0.5 bg-green-400 w-1/3"></span></span>
+                </h2>
+                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
+                    <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>Python</p></div>
+                    <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>ROS 2</p></div>
+                    <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>Gazebo</p></div>
+                    <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>OpenCV</p></div>
+                    <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>YOLOv8</p></div>
+                    <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>TensorFlow</p></div>
+                    <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>Fusion 360</p></div>
+                    <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>Docker</p></div>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+                     <div class="cert-card glass-effect p-6 rounded-lg bg-slate-800/50" data-tilt>
+                        <h4 class="font-bold text-green-400 mb-2">ROS 2 Development and Gazebo Simulation</h4>
+                        <p class="text-sm text-slate-300">Completed intensive training covering ROS 2 fundamentals, node creation, and realistic robot simulation in Gazebo.</p>
+                    </div>
+                     <div class="cert-card glass-effect p-6 rounded-lg bg-slate-800/50" data-tilt>
+                        <h4 class="font-bold text-green-400 mb-2">OpenCV Python for Computer Vision</h4>
+                        <p class="text-sm text-slate-300">Mastered computer vision techniques, including image processing and object detection using the OpenCV library in Python.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section id="achievements" class="py-24 section-hidden">
+                <h2 class="text-3xl font-bold text-center mb-16 text-slate-100 relative inline-block left-1/2 -translate-x-1/2">
+                    <span class="text-green-400 pr-2">05.</span> Achievements
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-slate-700"><span class="absolute bottom-0 left-0 h-0.5 bg-green-400 w-1/3"></span></span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="achievement-card glass-effect p-6 rounded-lg text-center bg-slate-800/50" data-tilt>
+                        <div class="text-5xl mb-3">🏆</div>
+                        <h3 class="text-xl font-bold text-green-400">Champion</h3>
+                        <p class="text-slate-200">Industrial Case Competition</p>
+                        <p class="text-sm text-slate-400">Crack the Cage by RMA</p>
+                    </div>
+                     <div class="achievement-card glass-effect p-6 rounded-lg text-center bg-slate-800/50" data-tilt>
+                        <div class="text-5xl mb-3">🥇</div>
+                        <h3 class="text-xl font-bold text-green-400">Champion</h3>
+                        <p class="text-slate-200">TECHDAY 2024 Robo Race</p>
+                        <p class="text-sm text-slate-400">by Robo Mechatronics Association</p>
+                    </div>
+                     <div class="achievement-card glass-effect p-6 rounded-lg text-center bg-slate-800/50" data-tilt>
+                        <div class="text-5xl mb-3">🥈</div>
+                        <h3 class="text-xl font-bold text-green-400">Runners Up</h3>
+                        <p class="text-slate-200">ROBO RACE</p>
+                        <p class="text-sm text-slate-400">by TECHNOXIAN</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Contact Section -->
+            <section id="contact" class="py-24 text-center section-hidden">
+                <h2 class="text-2xl font-bold text-slate-100 mb-2"><span class="text-green-400">06.</span> What's Next?</h2>
+                <h3 class="text-4xl lg:text-5xl font-bold text-slate-100 mb-4">Get In Touch</h3>
+                <p class="max-w-lg mx-auto text-slate-300 mb-8">I'm actively seeking new opportunities and collaborations where I can contribute to challenging projects. Whether you have a question, a project idea, or just want to connect, my inbox is always open.</p>
+                <a href="mailto:u2102090@student.cuet.ac.bd" class="inline-block bg-transparent hover:bg-green-400 text-green-400 font-semibold hover:text-slate-900 py-4 px-8 border-2 border-green-400 hover:border-transparent rounded-lg transition-all duration-300 text-lg">
+                    Say Hello
+                </a>
+            </section>
+        </div>
+    </main>
+    
+    <footer class="py-8 text-center text-slate-400 text-sm">
+        <p>Designed & Built with passion by Shourv Tarafder</p>
+    </footer>
+
+    <script>
+    window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        preloader.style.opacity = '0';
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500);
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // --- Custom Cursor ---
+        const cursorDot = document.querySelector(".cursor-dot");
+        const cursorOutline = document.querySelector(".cursor-outline");
+        window.addEventListener("mousemove", function (e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            cursorOutline.style.left = `${posX}px`;
+            cursorOutline.style.top = `${posY}px`;
+        });
+
+        // --- Typing Effect ---
+        const typingText = document.getElementById('typing-text');
+        const phrases = ["I build things for the future.", "I innovate with robotics & AI.", "I solve complex problems."];
+        let phraseIndex = 0; let letterIndex = 0; let currentPhrase = ""; let isDeleting = false;
+        function type() {
+            const phrase = phrases[phraseIndex];
+            if (isDeleting) { currentPhrase = phrase.substring(0, letterIndex - 1); letterIndex--; } 
+            else { currentPhrase = phrase.substring(0, letterIndex + 1); letterIndex++; }
+            typingText.textContent = currentPhrase;
+            let typeSpeed = isDeleting ? 75 : 150;
+            if (!isDeleting && letterIndex === phrase.length) { typeSpeed = 2000; isDeleting = true; } 
+            else if (isDeleting && letterIndex === 0) { isDeleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; typeSpeed = 500; }
+            setTimeout(type, typeSpeed);
+        }
+        type();
+
+        // --- Scroll Animations ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) { entry.target.classList.add('section-visible'); }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.section-hidden').forEach(section => observer.observe(section));
+        
+        // --- Active Nav on Scroll ---
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) { current = section.getAttribute('id'); }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('nav-active');
+                if (link.getAttribute('href').includes(current)) { link.classList.add('nav-active'); }
+            });
+        });
+
+        // --- Particles.js Background ---
+        particlesJS("particles-js", {
+            "particles": { "number": { "value": 60, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#4ade80" }, "shape": { "type": "circle" }, "opacity": { "value": 0.3, "random": true }, "size": { "value": 3, "random": true }, "line_linked": { "enable": true, "distance": 150, "color": "#4ade80", "opacity": 0.2, "width": 1 }, "move": { "enable": true, "speed": 1, "direction": "none", "straight": false } },
+            "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } }, "modes": { "repulse": { "distance": 100, "duration": 0.4 }, "push": { "particles_nb": 4 } } }
+        });
+
+        // --- Project Loader ---
+        const projects = [
+            { title: "Robot Simulation Platform", desc: "Developed a custom robot in Fusion 360, implementing autonomous navigation using ROS 2 Jazzy in a Gazebo simulation.", tags: "ROS 2, Gazebo, Python" },
+            { title: "Mars Rover - CUET Mongolchari", desc: "Contributed to a Mars Rover prototype, focusing on electrical systems and control mechanisms for exploration tasks.", tags: "Robotics, Circuit Design" },
+            { title: "Wall Climbing Crack Detector", desc: "Designed a robot that traverses vertical surfaces to autonomously detect and report structural cracks using computer vision.", tags: "OpenCV, Arduino" },
+            { title: "Bionic Arm (EMG Signal)", desc: "Engineered a prosthetic arm that translates muscular EMG signals into precise hand and finger movements.", tags: "Signal Processing, 3D Printing" },
+            { title: "Low Cost Braille Printer", desc: "Developed an affordable printer to emboss braille characters, making reading materials more accessible.", tags: "Prototyping, C, Arduino" },
+            { title: "Quadcopter Drone", desc: "Built and programmed a quadcopter from scratch, implementing stabilization algorithms and remote control functionalities.", tags: "Aerodynamics, ESP-32" },
+            { title: "Smart Voice Assistant & IoT", desc: "Created a voice-controlled assistant integrated with an IoT system for seamless home and room automation.", tags: "IoT, Python, Raspberry Pi" },
+            { title: "Delivery Robot", desc: "Built an autonomous robot for delivering items based on pre-defined coordinates, using GPS and pathfinding algorithms.", tags: "Autonomous Navigation, GPS" }
+        ];
+        const projectContainer = document.querySelector('#projects .grid');
+        const showMoreBtn = document.getElementById('show-more-btn');
+        let projectsToShow = 3;
+        function renderProjects() {
+            projectContainer.innerHTML = '';
+            projects.slice(0, projectsToShow).forEach(p => {
+                const projectEl = document.createElement('div');
+                projectEl.className = 'glass-effect project-card rounded-lg p-6 flex flex-col bg-slate-800/50';
+                projectEl.setAttribute('data-tilt', '');
+                projectEl.innerHTML = `
+                    <h3 class="text-xl font-semibold text-slate-100 mb-2" style="transform: translateZ(20px);">${p.title}</h3>
+                    <p class="text-slate-300 text-sm flex-grow" style="transform: translateZ(15px);">${p.desc}</p>
+                    <div class="mt-4 text-xs text-green-400 font-mono">${p.tags}</div>
+                `;
+                projectContainer.appendChild(projectEl);
+            });
+            if (projectsToShow >= projects.length) { showMoreBtn.style.display = 'none'; }
+            VanillaTilt.init(document.querySelectorAll("[data-tilt]"));
+        }
+        showMoreBtn.addEventListener('click', () => { projectsToShow += 3; renderProjects(); });
+        renderProjects();
+    });
+    </script>
+</body>
+</html>
+
