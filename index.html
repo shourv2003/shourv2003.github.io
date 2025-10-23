@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shourv Tarafder | EEE Student & Robotics Enthusiast</title>
+    <!-- Updated Title -->
+    <title>Shourv Tarafder | EEE & Robotics</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
@@ -113,6 +114,13 @@
         .project-card:hover {
             box-shadow: 0 10px 30px -15px rgba(74, 222, 128, 0.2);
         }
+        /* Style for new project images */
+        .project-card img {
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -151,15 +159,17 @@
                 <div class="w-full text-center lg:text-left">
                     <p class="text-green-400 font-medium mb-4 text-lg">Hi, my name is</p>
                     <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-100 mb-4">Shourv Tarafder.</h1>
+                    <!-- Updated Typing Text -->
                     <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-400 mb-6 typing" id="typing-text"></h2>
+                    <!-- Updated Hero Paragraph -->
                     <p class="max-w-xl mx-auto lg:mx-0 text-slate-300 mb-8 leading-relaxed">
-                        I'm an Electrical & Electronic Engineering student specializing in Robotics, IoT, and AI. I build innovative systems that bridge the physical and digital worlds.
+                        I am an Electrical & Electronic Engineering student with a deep research interest in robotics, autonomous navigation, and AI-driven systems.
                     </p>
                     <div class="flex justify-center lg:justify-start items-center space-x-6">
                         <!-- NOTE: Add your real CV link here -->
                         <a href="#" class="inline-block bg-green-400 text-slate-900 font-bold py-3 px-8 rounded-lg hover:bg-green-300 transition-colors">View Resume</a>
                          <div class="flex items-center space-x-6">
-                            <a href="#" target="_blank" class="icon-link text-slate-400 hover:text-green-400 transition-colors" aria-label="LinkedIn"><svg xmlns="http://www.w.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                            <a href="#" target="_blank" class="icon-link text-slate-400 hover:text-green-400 transition-colors" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
                             <a href="#" target="_blank" class="icon-link text-slate-400 hover:text-green-400 transition-colors" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
                         </div>
                     </div>
@@ -173,16 +183,17 @@
                     <span class="absolute bottom-0 left-0 w-full h-0.5 bg-slate-700"><span class="absolute bottom-0 left-0 h-0.5 bg-green-400 w-1/3"></span></span>
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-10 items-center">
+                    <!-- Updated About Me Text -->
                     <div class="md:col-span-3">
-                         <p class="text-slate-300 mb-4 leading-relaxed">Hello! I'm Shourv, a third-year Electrical & Electronic Engineering student at <span class="text-green-400 font-semibold">Chittagong University of Engineering and Technology (CUET)</span>. My fascination with technology began with simple circuits and has evolved into a deep-seated passion for creating intelligent systems that can perceive and interact with the world.</p>
-                        <p class="text-slate-300 mb-4 leading-relaxed">My focus is on Industrial Control Systems, Autonomous Navigation, Robotics, and IoT. I have hands-on experience in <span class="text-green-400 font-semibold">ROS 2 development</span>, Gazebo simulation, 3D mechanical design, <span class="text-green-400 font-semibold">YOLO object detection</span>, and OpenCV applications. I am actively seeking opportunities to apply my skills in robotics, automation, and AI-driven systems to develop innovative solutions.</p>
+                         <p class="text-slate-300 mb-4 leading-relaxed">Hello! I'm Shourv, an Electrical & Electronic Engineering student at <span class="text-green-400 font-semibold">Chittagong University of Engineering and Technology (CUET)</span>. My passion lies at the intersection of robotics, machine learning, and autonomous systems. I am eager to pursue research and development in industrial automation, autonomous navigation, and human-robot collaboration.</p>
+                         <p class="text-slate-300 mb-4 leading-relaxed">My hands-on experience includes <span class="text-green-400 font-semibold">ROS 2 (Jazzy)</span> development, Gazebo simulation, computer vision with <span class="text-green-400 font-semibold">OpenCV and YOLO</span>, and 3D mechanical design. I am driven to develop innovative solutions that enhance efficiency and autonomy in real-world applications.</p>
                     </div>
                      <div class="md:col-span-2 flex justify-center">
-                        <div class="w-64 h-64 rounded-lg bg-slate-800 border-2 border-green-400 relative group" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
-                            <img src="https://placehold.co/400x400/0f172a/e2e8f0?text=Shourv" alt="Shourv Tarafder" class="rounded-lg absolute inset-0 w-full h-full object-cover transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2">
+                         <div class="w-64 h-64 rounded-lg bg-slate-800 border-2 border-green-400 relative group" data-tilt data-tilt-glare data-tilt-max-glare="0.3">
+                             <img src="https://placehold.co/400x400/0f172a/e2e8f0?text=Shourv" alt="Shourv Tarafder" class="rounded-lg absolute inset-0 w-full h-full object-cover transform transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2">
                              <div class="w-full h-full rounded-lg border-2 border-green-400 absolute top-0 left-0 transform transition-transform duration-300 group-hover:-translate-x-2 group-hover:translate-y-2"></div>
-                        </div>
-                    </div>
+                         </div>
+                     </div>
                 </div>
             </section>
             
@@ -194,6 +205,7 @@
                 </h2>
                 <div class="max-w-3xl mx-auto">
                     <div class="relative border-l-2 border-slate-700 pl-8 space-y-12">
+                        <!-- Unchanged Experience -->
                         <div class="relative">
                             <div class="absolute -left-[3.2rem] top-1 h-6 w-6 rounded-full bg-green-400 border-4 border-slate-900 shadow-md shadow-green-400/50"></div>
                             <p class="text-sm text-green-400">Present</p>
@@ -204,6 +216,12 @@
                             <div class="absolute -left-[3.2rem] top-1 h-6 w-6 rounded-full bg-green-400 border-4 border-slate-900"></div>
                             <h3 class="text-xl font-semibold text-slate-100">Electric Team Lead @ CUET Mongolchari (Mars Rover)</h3>
                             <p class="text-sm text-slate-400 mb-2">Managed the electrical team, overseeing power systems, motor control, and sensor integration for the university's Mars Rover project.</p>
+                        </div>
+                         <!-- Added new role from CV -->
+                         <div class="relative">
+                            <div class="absolute -left-[3.2rem] top-1 h-6 w-6 rounded-full bg-green-400 border-4 border-slate-900"></div>
+                            <h3 class="text-xl font-semibold text-slate-100">Leader @ CUET Adventure Society</h3>
+                            <p class="text-sm text-slate-400 mb-2">Organized and led university-level adventure and exploration activities.</p>
                         </div>
                         <div class="relative">
                             <div class="absolute -left-[3.2rem] top-1 h-6 w-6 rounded-full bg-green-400 border-4 border-slate-900"></div>
@@ -239,16 +257,22 @@
                     <span class="text-green-400 pr-2">04.</span> Skills & Certifications
                     <span class="absolute bottom-0 left-0 w-full h-0.5 bg-slate-700"><span class="absolute bottom-0 left-0 h-0.5 bg-green-400 w-1/3"></span></span>
                 </h2>
-                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
+                <!-- Updated Skills Grid -->
+                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 text-center">
                     <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>Python</p></div>
-                    <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>ROS 2</p></div>
+                    <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>C</p></div>
+                    <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>ROS 2 (Jazzy)</p></div>
                     <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>Gazebo</p></div>
                     <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>OpenCV</p></div>
                     <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>YOLOv8</p></div>
                     <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>TensorFlow</p></div>
+                    <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>NVIDIA Jetson</p></div>
                     <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>Fusion 360</p></div>
                     <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>Docker</p></div>
+                    <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>MATLAB</p></div>
+                    <div class="glass-effect p-4 rounded-lg flex items-center justify-center hover:bg-slate-800/50 transition-colors" data-tilt><p>Linux (Ubuntu)</p></div>
                 </div>
+                <!-- Updated Certifications List -->
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
                      <div class="cert-card glass-effect p-6 rounded-lg bg-slate-800/50" data-tilt>
                         <h4 class="font-bold text-green-400 mb-2">ROS 2 Development and Gazebo Simulation</h4>
@@ -258,17 +282,25 @@
                         <h4 class="font-bold text-green-400 mb-2">OpenCV Python for Computer Vision</h4>
                         <p class="text-sm text-slate-300">Mastered computer vision techniques, including image processing and object detection using the OpenCV library in Python.</p>
                     </div>
+                    <div class="cert-card glass-effect p-6 rounded-lg bg-slate-800/50" data-tilt>
+                        <h4 class="font-bold text-green-400 mb-2">Advanced Machine Learning and Data Science</h4>
+                        <p class="text-sm text-slate-300">Focused on advanced algorithms, data modeling, and practical applications in data science.</p>
+                    </div>
+                     <div class="cert-card glass-effect p-6 rounded-lg bg-slate-800/50" data-tilt>
+                        <h4 class="font-bold text-green-400 mb-2">Robotics Training (60 Days)</h4>
+                        <p class="text-sm text-slate-300">Completed a 60-day intensive robotics training from ROBOMENT ROBOTICS CAMP.</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- Achievements Section -->
+            <!-- Achievements Section (Unchanged) -->
             <section id="achievements" class="py-24 section-hidden">
                 <h2 class="text-3xl font-bold text-center mb-16 text-slate-100 relative inline-block left-1/2 -translate-x-1/2">
                     <span class="text-green-400 pr-2">05.</span> Achievements
                     <span class="absolute bottom-0 left-0 w-full h-0.5 bg-slate-700"><span class="absolute bottom-0 left-0 h-0.5 bg-green-400 w-1/3"></span></span>
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="achievement-card glass-effect p-6 rounded-lg text-center bg-slate-800/50" data-tilt>
+                     <div class="achievement-card glass-effect p-6 rounded-lg text-center bg-slate-800/50" data-tilt>
                         <div class="text-5xl mb-3">🏆</div>
                         <h3 class="text-xl font-bold text-green-400">Champion</h3>
                         <p class="text-slate-200">Industrial Case Competition</p>
@@ -293,7 +325,10 @@
             <section id="contact" class="py-24 text-center section-hidden">
                 <h2 class="text-2xl font-bold text-slate-100 mb-2"><span class="text-green-400">06.</span> What's Next?</h2>
                 <h3 class="text-4xl lg:text-5xl font-bold text-slate-100 mb-4">Get In Touch</h3>
-                <p class="max-w-lg mx-auto text-slate-300 mb-8">I'm actively seeking new opportunities and collaborations where I can contribute to challenging projects. Whether you have a question, a project idea, or just want to connect, my inbox is always open.</p>
+                <!-- Updated Contact Paragraph -->
+                <p class="max-w-lg mx-auto text-slate-300 mb-8">
+                    I'm actively seeking new opportunities and collaborations where I can contribute to challenging projects. Whether you have a question, a project idea, or just want to connect, my inbox is always open.
+                </p>
                 <a href="mailto:u2102090@student.cuet.ac.bd" class="inline-block bg-transparent hover:bg-green-400 text-green-400 font-semibold hover:text-slate-900 py-4 px-8 border-2 border-green-400 hover:border-transparent rounded-lg transition-all duration-300 text-lg">
                     Say Hello
                 </a>
@@ -327,9 +362,9 @@
             cursorOutline.style.top = `${posY}px`;
         });
 
-        // --- Typing Effect ---
+        // --- Typing Effect (Updated Phrases) ---
         const typingText = document.getElementById('typing-text');
-        const phrases = ["I build things for the future.", "I innovate with robotics & AI.", "I solve complex problems."];
+        const phrases = ["I'm a Robotics Researcher.", "I build autonomous systems.", "I innovate with EEE & AI."]; // Updated
         let phraseIndex = 0; let letterIndex = 0; let currentPhrase = ""; let isDeleting = false;
         function type() {
             const phrase = phrases[phraseIndex];
@@ -372,16 +407,72 @@
             "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } }, "modes": { "repulse": { "distance": 100, "duration": 0.4 }, "push": { "particles_nb": 4 } } }
         });
 
-        // --- Project Loader ---
+        // --- Project Loader (Updated Projects) ---
         const projects = [
-            { title: "Robot Simulation Platform", desc: "Developed a custom robot in Fusion 360, implementing autonomous navigation using ROS 2 Jazzy in a Gazebo simulation.", tags: "ROS 2, Gazebo, Python" },
-            { title: "Mars Rover - CUET Mongolchari", desc: "Contributed to a Mars Rover prototype, focusing on electrical systems and control mechanisms for exploration tasks.", tags: "Robotics, Circuit Design" },
-            { title: "Wall Climbing Crack Detector", desc: "Designed a robot that traverses vertical surfaces to autonomously detect and report structural cracks using computer vision.", tags: "OpenCV, Arduino" },
-            { title: "Bionic Arm (EMG Signal)", desc: "Engineered a prosthetic arm that translates muscular EMG signals into precise hand and finger movements.", tags: "Signal Processing, 3D Printing" },
-            { title: "Low Cost Braille Printer", desc: "Developed an affordable printer to emboss braille characters, making reading materials more accessible.", tags: "Prototyping, C, Arduino" },
-            { title: "Quadcopter Drone", desc: "Built and programmed a quadcopter from scratch, implementing stabilization algorithms and remote control functionalities.", tags: "Aerodynamics, ESP-32" },
-            { title: "Smart Voice Assistant & IoT", desc: "Created a voice-controlled assistant integrated with an IoT system for seamless home and room automation.", tags: "IoT, Python, Raspberry Pi" },
-            { title: "Delivery Robot", desc: "Built an autonomous robot for delivering items based on pre-defined coordinates, using GPS and pathfinding algorithms.", tags: "Autonomous Navigation, GPS" }
+            { 
+                title: "Autonomous Robot Simulation (ROS 2)", 
+                desc: "Developed custom robot model in Fusion 360, implemented autonomous navigation using ROS 2 Jazzy in Gazebo simulation environment.", 
+                tags: "ROS 2, Gazebo, Fusion 360",
+                image: "https://placehold.co/600x400/1e293b/4ade80?text=ROS+2+Simulation",
+                codeLink: "#",
+                videoLink: "#"
+            },
+            { 
+                title: "UAV for Surveillance & Mapping", 
+                desc: "Designed and developed an Unmanned Aerial Vehicle (UAV) from scratch for autonomous surveillance and mapping applications.", 
+                tags: "Drones, UAV, C++",
+                image: "https://placehold.co/600x400/1e293b/4ade80?text=UAV+Project",
+                codeLink: "#",
+                videoLink: "#"
+            },
+            { 
+                title: "Wall Climbing Crack Detector", 
+                desc: "Designed a robot that traverses vertical surfaces to autonomously detect and report structural cracks using computer vision.", 
+                tags: "OpenCV, Arduino, Robotics",
+                image: "https://placehold.co/600x400/1e293b/4ade80?text=Wall+Climber+Robot",
+                codeLink: "#",
+                videoLink: "#"
+            },
+            { 
+                title: "Mars Rover - CUET Mongolchari", 
+                desc: "Contributed to a Mars Rover prototype, focusing on electrical systems and control mechanisms for exploration tasks.", 
+                tags: "Robotics, Circuit Design",
+                image: "https://placehold.co/600x400/1e293b/4ade80?text=Mars+Rover",
+                codeLink: "#",
+                videoLink: "#"
+            },
+            { 
+                title: "Bionic Arm (EMG Signal)", 
+                desc: "Engineered a prosthetic arm that translates muscular EMG signals into precise hand and finger movements.", 
+                tags: "Signal Processing, 3D Printing",
+                image: "https://placehold.co/600x400/1e293b/4ade80?text=Bionic+Arm",
+                codeLink: "#",
+                videoLink: "#"
+            },
+            { 
+                title: "Low Cost Braille Printer", 
+                desc: "Developed an affordable printer to emboss braille characters, making reading materials more accessible.", 
+                tags: "Prototyping, C, Arduino",
+                image: "https://placehold.co/600x400/1e293b/4ade80?text=Braille+Printer",
+                codeLink: "#",
+                videoLink: "#"
+            },
+            { 
+                title: "Delivery Robot", 
+                desc: "Built an autonomous robot for delivering items based on pre-defined coordinates, using GPS and pathfinding algorithms.", 
+                tags: "Autonomous Navigation, GPS",
+                image: "https://placehold.co/600x400/1e293b/4ade80?text=Delivery+Robot",
+                codeLink: "#",
+                videoLink: "#"
+            },
+            { 
+                title: "Smart Voice Assistant & IoT", 
+                desc: "Created a voice-controlled assistant integrated with an IoT system for seamless home and room automation.", 
+                tags: "IoT, Python, Raspberry Pi",
+                image: "https://placehold.co/600x400/1e293b/4ade80?text=Smart+Home",
+                codeLink: "#",
+                videoLink: "#"
+            }
         ];
         const projectContainer = document.querySelector('#projects .grid');
         const showMoreBtn = document.getElementById('show-more-btn');
@@ -390,12 +481,25 @@
             projectContainer.innerHTML = '';
             projects.slice(0, projectsToShow).forEach(p => {
                 const projectEl = document.createElement('div');
-                projectEl.className = 'glass-effect project-card rounded-lg p-6 flex flex-col bg-slate-800/50';
+                projectEl.className = 'glass-effect project-card rounded-lg p-6 flex flex-col bg-slate-800/50 group'; // Added 'group' for hover
                 projectEl.setAttribute('data-tilt', '');
                 projectEl.innerHTML = `
+                    <div class="relative mb-4 overflow-hidden rounded-lg" style="transform: translateZ(25px);">
+                        <img src="${p.image}" alt="${p.title}" class="w-full h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://placehold.co/600x400/1e293b/4ade80?text=Image+Not+Found'">
+                    </div>
                     <h3 class="text-xl font-semibold text-slate-100 mb-2" style="transform: translateZ(20px);">${p.title}</h3>
                     <p class="text-slate-300 text-sm flex-grow" style="transform: translateZ(15px);">${p.desc}</p>
-                    <div class="mt-4 text-xs text-green-400 font-mono">${p.tags}</div>
+                    <div class="flex justify-between items-center mt-4">
+                        <div class="text-xs text-green-400 font-mono" style="transform: translateZ(10px);">${p.tags}</div>
+                        <div class="flex space-x-3" style="transform: translateZ(10px);">
+                            <a href="${p.codeLink}" target="_blank" class="text-slate-400 hover:text-green-400 transition-colors" aria-label="Source Code">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                            <a href="${p.videoLink}" target="_blank" class="text-slate-400 hover:text-green-400 transition-colors" aria-label="Video Demo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2A29 29 0 0 0 23 11.75a29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                            </a>
+                        </div>
+                    </div>
                 `;
                 projectContainer.appendChild(projectEl);
             });
